@@ -1,7 +1,8 @@
 # python-recipe-parser
 This is a Repo for a General Recipe Parser using python and mongodb.
 
-Recipe Parser (Phase 1)
+## Recipe Parser (Phase 1)
+
 Time Goal: Finish by August 24th
 Database: Cosmos DB - MongoDB
 

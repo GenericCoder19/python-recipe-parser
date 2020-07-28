@@ -14,6 +14,20 @@ def parse_ingredient_string(ingredient_string):
             ingredient.amount
 
 # TODO - dynamically get addresses, and not just hardcode this.
+main_recipe_url = 'https://www.allrecipes.com/recipe/'
+
+for i in range(1000000):
+    url = main_recipe_url + str(i)
+
+    r = requests.get(url)
+    print(url)
+    if r.status_code == 200:
+        recipe_content = r.content
+        soup = BeautifulSoup(recipe_content, 'html.parser')
+
+        name = soup.find("h1", {"class": "headline heading-content"}).text
+        print('HIT: ' + name)
+
 recipes = ["https://www.allrecipes.com/recipe/231026/keema-aloo-ground-beef-and-potatoes/?internalSource=rotd&referringContentType=Homepage&clickId=cardslot%201"]
 
 for recipe in recipes:

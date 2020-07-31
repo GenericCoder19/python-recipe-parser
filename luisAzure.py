@@ -107,7 +107,7 @@ def create_utterance(intent, utterance, *labels):
 
 def add_utterances(app_id, app_version):
     azure_utterances = []
-    for utterance in utterances[:200]:
+    for utterance in utterances[:2000]:
         if(utterance.sentence == ""):
             continue
         azure_utterances.append(create_utterance("FindIngredient", utterance.sentence,
@@ -116,7 +116,7 @@ def add_utterances(app_id, app_version):
                 ("ingredient", utterance.ingredient),
                 ("comment", utterance.comment)
                 ))
-    for i in range(len(utterances[:200]) // 10):
+    for i in range(len(utterances[:2000]) // 10):
         client.examples.batch(app_id, app_version, azure_utterances[i * 10:(i+1) * 10])
     print("{} example utterance(s) added.".format(len(azure_utterances)))
 

@@ -26,11 +26,11 @@ def create_entity_object(sentence, entity_name, value):
 
 class UtterenceObject:
     def __init__(self, sentence, quantity, unit, ingredient, comment):
-        self.sentence = sentence
-        self.quantity = quantity
-        self.unit = unit
-        self.ingredient = ingredient
-        self.comment = comment
+        self.sentence = sentence.replace(",","").replace(")","").replace("(","")
+        self.quantity = quantity.replace(",","").replace(")","").replace("(","")
+        self.unit = unit.replace(",","").replace(")","").replace("(","")
+        self.ingredient = ingredient.replace(",","").replace(")","").replace("(","")
+        self.comment = comment.replace(",","").replace(")","").replace("(","")
 
 utterances = []
 
@@ -38,18 +38,31 @@ with open('nyt-ingredients-snapshot-2015.csv') as csvfile:
     readCSV = csv.reader(csvfile, delimiter=',')
     for row in readCSV:
         sentence = row[1]
-        quantity = #TODO - fix this
         unit = row[5]
         ingredient = row[2]
         comment = row[6]
+        quantity = ""
 
-        if(sentence.find(quantity
+        temp = sentence.split(' ')
+        while(temp):
+            t = temp.pop(0)
+            if not t.isalpha():
+                quantity += t
+            else:
+                break
+        quantity.strip()
+
+        if (unit not in sentence) or (ingredient not in sentence) or (quantity not in sentence):
+            continue
+        if (comment not in sentence):
+            comment = sentence
+
         utterances.append(UtterenceObject(
-            row[1], # sentence
-            row[3], # quantity
-            row[5], # unit
-            row[2], # ingredient
-            row[6] # comment
+            sentence, # sentence
+            quantity, # quantity
+            unit, # unit
+            ingredient, # ingredient
+            comment # comment
             )
         )
 
@@ -103,7 +116,8 @@ def add_utterances(app_id, app_version):
                 ("ingredient", utterance.ingredient),
                 ("comment", utterance.comment)
                 ))
-    client.examples.batch(app_id, app_version, azure_utterances)
+    for i in range(len(utterances[:200]) // 10):
+        client.examples.batch(app_id, app_version, azure_utterances[i * 10:(i+1) * 10])
     print("{} example utterance(s) added.".format(len(azure_utterances)))
 
 def train_app(app_id, app_version):

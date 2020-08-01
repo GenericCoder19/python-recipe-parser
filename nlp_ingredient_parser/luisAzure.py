@@ -31,6 +31,8 @@ class UtterenceObject:
             self.comment = None
 
 def get_first_continuous_comment(comment, sentence):
+    # TODO - we need to change the behavior to return a list of strings that are all of the contiguous comment strings
+    # -> if we do this, we need to change behavior when adding utterances.
     c_arr, s_arr = comment.split(" "), sentence.split(" ")
     out = []
     while(len(s_arr)): #makes sentence start with first word in the comment

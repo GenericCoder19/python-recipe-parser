@@ -5,6 +5,7 @@ from msrest.authentication import CognitiveServicesCredentials
 
 import datetime, json, os, time
 import csv
+import re
 
 authoring_key = 'c04d90e868b64a428447ce34dd941306'
 authoring_endpoint = 'https://ingredient-parser-authoring.cognitiveservices.azure.com/'
@@ -12,33 +13,37 @@ authoring_endpoint = 'https://ingredient-parser-authoring.cognitiveservices.azur
 def get_first_continuous_comment(comment, sentence):
     c_arr, s_arr = comment.split(" "), sentence.split(" ")
     out = []
-    while(len(s_arr)):
+    while(len(s_arr)): #makes sentence start with first word in the comment
         if s_arr[0] != c_arr[0]:
             s_arr.pop(0)
         else:
             break
-    while(len(c_arr) and len(s_arr)):
+    while(len(c_arr) and len(s_arr)): #if the word in comment matches word in sentence, append it to out - this would be better optimized as a doWhile loop, when that stops happening, break out
         temp_c = c_arr.pop(0)
         if temp_c == s_arr.pop(0):
             out.append(temp_c)
         else:
             break
-    return " ".join(out)
+    return " ".join(out) #Return it as a string, space separated
 
 class UtterenceObject:
     def __init__(self, sentence, quantity, unit, ingredient, comment):
         self.sentence = sentence.replace(",","").replace(")","").replace("(","")
         if quantity:
-            self.quantity = quantity.replace(",","").replace(")","").replace("(","")
+            self.quantity = re.sub(',()', '', self.quantity)
+            # self.quantity = quantity.replace(",","").replace(")","").replace("(","")
         else:
             self.quantity = None
         if unit:
-            self.unit = unit.replace(",","").replace(")","").replace("(","")
+            self.unit = re.sub(',()', '', self.unit)
+            #self.unit = unit.replace(",","").replace(")","").replace("(","")
         else:
             self.unit = None
-        self.ingredient = ingredient.replace(",","").replace(")","").replace("(","")
+        self.ingredient = re.sub(',()', '', self.ingredient)
+        #self.ingredient = ingredient.replace(",","").replace(")","").replace("(","")
         if comment:
-            self.comment = comment.replace(",","").replace(")","").replace("(","")
+            self.comment = re.sub(',()', '', self.comment)
+            #self.comment = comment.replace(",","").replace(")","").replace("(","")
         else:
             self.comment = None
 
@@ -54,7 +59,7 @@ with open('nyt-ingredients-snapshot-2015.csv') as csvfile:
         quantity = ""
 
         temp = sentence.split(' ')
-        while(temp):
+        while(temp):    # appends any numbers found in the sentence to the quantity string
             t = temp.pop(0)
             if not t.isalpha():
                 quantity += t
@@ -62,12 +67,12 @@ with open('nyt-ingredients-snapshot-2015.csv') as csvfile:
                 break
         quantity.strip()
 
-        if (unit not in sentence) or (ingredient not in sentence) or (quantity not in sentence):
+        if (unit not in sentence) or (ingredient not in sentence) or (quantity not in sentence): # if it's missing anything, pass
             continue
         if (comment not in sentence and comment):
-            comment = get_first_continuous_comment(comment, sentence)
+            comment = get_first_continuous_comment(comment, sentence) # if no comment, generate one
 
-        utterances.append(UtterenceObject(
+        utterances.append(UtterenceObject( # adds an utterance to the list given above
             sentence, # sentence
             quantity, # quantity
             unit, # unit

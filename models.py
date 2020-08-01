@@ -22,6 +22,7 @@ class Recipe(Document):
     name = StringField(required=True)
     recipe_ingredients = ListField(ReferenceField(RecipeIngredient), required=True)
     tags = ListField(ReferenceField(RecipeTag), required=True)
-    instructions = ListField(StringField(), required=True)
     notes = StringField()
     url = URLField()
+    prep_time_minutes = IntField(required=True)
+    cook_time_minutes = IntField(required=True)

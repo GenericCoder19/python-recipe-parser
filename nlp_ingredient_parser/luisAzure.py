@@ -26,7 +26,7 @@ class UtterenceObject:
             self.unit = None
         self.ingredient = re.sub(',|(|)', '', ingredient)
         if comment:
-            self.comment = re.sub(',|(|)', '', comment)
+            self.comment = re.sub(',|(|)', '', comment) # TODO - make this a list of comments
         else:
             self.comment = None
 
@@ -60,6 +60,7 @@ def create_utterance_object_list():
             comment = row[6]
             quantity = ""
 
+            # TODO - also handle "one" as well as 1
             temp = sentence.split(' ')
             while(temp):    # appends any numbers found in the sentence to the quantity string
                 t = temp.pop(0)
@@ -72,7 +73,8 @@ def create_utterance_object_list():
             if (unit not in sentence) or (ingredient not in sentence) or (quantity not in sentence): # if it's missing anything, pass
                 continue
             if (comment not in sentence and comment):
-                comment = get_first_continuous_comment(comment, sentence) # if no comment, generate one
+                # TODO - when this is redone, make sure comment is treated as a list
+                comment = get_first_continuous_comment(comment, sentence)
 
             utterances.append(UtterenceObject( # adds an utterance to the list given above
                 sentence, 
@@ -86,7 +88,7 @@ def create_utterance_object_list():
 
 def create_app():
     # Create a new LUIS app
-    app_name    = "Ingredient Parser{}".format(datetime.datetime.now())
+    app_name    = "Ingredient Parser {}".format(datetime.datetime.now())
     app_desc    = "Ingredient parser built with the LUIS Python SDK"
     app_version = "0.1"
     app_locale  = "en-us"
@@ -105,12 +107,15 @@ def add_intents(app_id, app_version):
     print("Intent FindIngredient {} added.".format(intentId))
 
 def add_entities(app_id, app_version):
+    # manually add these to the intents
+    # TODO - attach these to intent
     quantityEntityId = client.model.add_entity(app_id, app_version, name="quantity")
     unitEntityId = client.model.add_entity(app_id, app_version, name="unit")
     ingredientEntityId = client.model.add_entity(app_id, app_version, name="ingredient")
     commentEntityId = client.model.add_entity(app_id, app_version, name="comment")
 
 def create_utterance(intent, utterance, *labels):
+    # when things becomes a list, update this.
     text = utterance.lower()
 
     def label(name, value):
@@ -125,6 +130,7 @@ def add_utterances(app_id, app_version, utterances):
     for utterance in utterances[:10000]:
         if(utterance.sentence == ""):
             continue
+        # when things becomes a list, update this.
         azure_utterances.append(create_utterance("FindIngredient", utterance.sentence,
                 ("quantity", utterance.quantity),
                 ("unit", utterance.unit),
@@ -134,17 +140,6 @@ def add_utterances(app_id, app_version, utterances):
     for i in range(len(utterances[:10000]) // 10):
         client.examples.batch(app_id, app_version, azure_utterances[i * 10:(i+1) * 10])
     print("{} example utterance(s) added.".format(len(azure_utterances)))
-
-def train_app(app_id, app_version):
-    response = client.train.train_version(app_id, app_version)
-    waiting = True
-    while waiting:
-        info = client.train.get_status(app_id, app_version)
-
-        waiting = any(map(lambda x: 'Queued' == x.details.status or 'InProgress' == x.details.status, info))
-        if waiting:
-            print("waiting 10 seconds for training to complete..")
-            time.sleep(10)
 
 def run_application():
     print("creating utterances.")

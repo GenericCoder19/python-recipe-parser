@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Index</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css')}}">
+</head>
+
+<body>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css')}}">
+  <h1 style="color: blue">Index</h1>
+  <p>This is an HTML file served up by Flask</p>
+</body>
+
+<form method="POST">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css')}}">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"
+    size="30" placeholder="name"><br><br>
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname"
+    size="30" placeholder="last"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <body>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css')}}">
+    <h1 style="color: red">Greetings</h1>
+    <p>Hey there {{fname }} {{ lname }}</p>
+  </body>
+
+</html>

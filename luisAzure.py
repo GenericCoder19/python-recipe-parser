@@ -9,28 +9,38 @@ import csv
 authoring_key = 'c04d90e868b64a428447ce34dd941306'
 authoring_endpoint = 'https://ingredient-parser-authoring.cognitiveservices.azure.com/'
 
-'''
-utterances = []
-
-def create_entity_object(sentence, entity_name, value):
-    # get the index for the beginning and end of the word.
-    start = sentence.find(value)
-    end = start + len(value) - 1
-    if start == -1:
-        return None
-    else:
-        return EntityLabelObject(entity_name=entity_name,
-                                start_char_index = start,
-                                end_char_index = end)
-'''
+def get_first_continuous_comment(comment, sentence):
+    c_arr, s_arr = comment.split(" "), sentence.split(" ")
+    out = []
+    while(len(s_arr)):
+        if s_arr[0] != c_arr[0]:
+            s_arr.pop(0)
+        else:
+            break
+    while(len(c_arr) and len(s_arr)):
+        temp_c = c_arr.pop(0)
+        if temp_c == s_arr.pop(0):
+            out.append(temp_c)
+        else:
+            break
+    return " ".join(out)
 
 class UtterenceObject:
     def __init__(self, sentence, quantity, unit, ingredient, comment):
         self.sentence = sentence.replace(",","").replace(")","").replace("(","")
-        self.quantity = quantity.replace(",","").replace(")","").replace("(","")
-        self.unit = unit.replace(",","").replace(")","").replace("(","")
+        if quantity:
+            self.quantity = quantity.replace(",","").replace(")","").replace("(","")
+        else:
+            self.quantity = None
+        if unit:
+            self.unit = unit.replace(",","").replace(")","").replace("(","")
+        else:
+            self.unit = None
         self.ingredient = ingredient.replace(",","").replace(")","").replace("(","")
-        self.comment = comment.replace(",","").replace(")","").replace("(","")
+        if comment:
+            self.comment = comment.replace(",","").replace(")","").replace("(","")
+        else:
+            self.comment = None
 
 utterances = []
 
@@ -54,8 +64,8 @@ with open('nyt-ingredients-snapshot-2015.csv') as csvfile:
 
         if (unit not in sentence) or (ingredient not in sentence) or (quantity not in sentence):
             continue
-        if (comment not in sentence):
-            comment = sentence
+        if (comment not in sentence and comment):
+            comment = get_first_continuous_comment(comment, sentence)
 
         utterances.append(UtterenceObject(
             sentence, # sentence
@@ -103,11 +113,11 @@ def create_utterance(intent, utterance, *labels):
         start = text.index(value)
         return dict(entity_name=name, start_char_index=start, end_char_index = start + len(value))
 
-    return dict(text=text, intent_name=intent, entity_labels = [label(n, v) for (n, v) in labels])
+    return dict(text=text, intent_name=intent, entity_labels = [label(n, v) for (n, v) in labels if v])
 
 def add_utterances(app_id, app_version):
     azure_utterances = []
-    for utterance in utterances[:2000]:
+    for utterance in utterances[:10000]:
         if(utterance.sentence == ""):
             continue
         azure_utterances.append(create_utterance("FindIngredient", utterance.sentence,
@@ -116,7 +126,7 @@ def add_utterances(app_id, app_version):
                 ("ingredient", utterance.ingredient),
                 ("comment", utterance.comment)
                 ))
-    for i in range(len(utterances[:2000]) // 10):
+    for i in range(len(utterances[:10000]) // 10):
         client.examples.batch(app_id, app_version, azure_utterances[i * 10:(i+1) * 10])
     print("{} example utterance(s) added.".format(len(azure_utterances)))
 

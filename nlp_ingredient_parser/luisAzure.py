@@ -51,7 +51,8 @@ def get_first_continuous_comment(comment, sentence):
 def create_utterance_object_list():
     utterances = []
 
-    with open('nyt-ingredients-snapshot-2015.csv') as csvfile:
+    # with open('nyt-ingredients-snapshot-2015.csv') as csvfile:
+    with open('ManualIngredientDataSet.csv') as csvfile:
         readCSV = csv.reader(csvfile, delimiter=',')
         for row in readCSV:
             sentence = row[1]
@@ -71,6 +72,7 @@ def create_utterance_object_list():
             quantity.strip()
 
             if (unit not in sentence) or (ingredient not in sentence) or (quantity not in sentence): # if it's missing anything, pass
+                # print("{}, {}, {}, {}, {}".format(sentence, unit, ingredient, comment, quantity))
                 continue
             if (comment not in sentence and comment):
                 # TODO - when this is redone, make sure comment is treated as a list
@@ -127,7 +129,7 @@ def create_utterance(intent, utterance, *labels):
 
 def add_utterances(app_id, app_version, utterances):
     azure_utterances = []
-    for utterance in utterances[:10000]:
+    for utterance in utterances[:]: # CHANGED THIS
         if(utterance.sentence == ""):
             continue
         # when things becomes a list, update this.
@@ -137,7 +139,7 @@ def add_utterances(app_id, app_version, utterances):
                 ("ingredient", utterance.ingredient),
                 ("comment", utterance.comment)
                 ))
-    for i in range(len(utterances[:10000]) // 10):
+    for i in range(len(utterances[:]) // 10):
         client.examples.batch(app_id, app_version, azure_utterances[i * 10:(i+1) * 10])
     print("{} example utterance(s) added.".format(len(azure_utterances)))
 

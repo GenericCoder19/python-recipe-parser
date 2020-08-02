@@ -1,121 +1,121 @@
 index,input,name,qty,range_end,unit,comment
-0,"""1 1/4 cups cooked and pureed fresh butternut squash, or 1 10-ounce package frozen squash, defrosted""",butternut squash,1 1/4,0,cup,"""cooked and pureed fresh"""
-1,"""3/4 ounce simple syrup""",simple syrup,3/4,0,ounce,
-2,"""2 sprigs mint, plus more for serving""",mint,2,0,sprigs,"""plus more for serving"""
-3,"""2 ounces white rum""",rum,2,0,ounces,"""white"""
-4,"""3/4 ounce fresh lime juice""",lime juice,3/4,0,ounce,"""fresh"""
-5,"""Club soda (for serving)""",club soda,,0,,"""for serving"""
-6,"""3 Tbsp. green peppercorns in brine or capers, drained, finely chopped""",green peppercorns,3,0,Tbsp,"""in brine or capers drained finely chopped"""
-7,"""3 Tbsp. honey""",honey,3,0,Tbsp,
-8,"""3 Tbsp. soy sauce or tamari""",soy sauce,3,0,Tbsp,"""or tamari"""
-9,"""3 Tbsp. unseasoned rice vinegar""",rice vinegar,3,0,Tbsp,"""unseasoned"""
-10,"""1 tsp. finely grated ginger (from one 2"" piece)""",ginger,1,0,tsp,"""finely grated from one 2"" piece"""
-11,"""3/4 cup (1-1/2 sticks) butter""",butter,3/4,0,cup,"""1-1/2 sticks"""
-12,"""1 pound uncooked shrimp, peeled, deveined""",shrimp,1,0,pound,"""uncooked peeled deveined"""
-13,"""1 Tbsp. vegetable oil""",vegetable oil,1,0,Tbsp,
-14,"""4 skinless, boneless chicken thighs""",chicken thighs,4,0,,"""skinless boneless"""
-15,"""1 1/2 tsp. kosher salt, divided, plus more""",kosher salt,1 1/2,0,tsp,"""divided plus more"""
-16,"""large of cut into florets""",broccoli,1,0,head,"""large head of cut into florets"""
-17,"""5 cups fresh (or frozen, thawed) blueberries""",blueberries,5,0,cup,"""fresh (or frozen, thawed)"""
-18,"""1/3 cup sugar""",sugar,1/3,0,cup,
-19,"""1 tablespoon cornstarch""",cornstarch,1,0,Tbsp,
-20,"""2/3 cup all-purpose flour""",all-purpose flour,2/3,0,cup,
-21,"""1 cup fresh corn kernels""",corn kernels,1,0,cup,"""(from about 1 large ear)"""
-22,"""10 tablespoons chilled unsalted butter, cut into pieces""",unsalted butter,10,0,Tbsp,"""chilled, cut into pieces"""
-23,"""1 dried guajillo or New Mexico chile or""",guajillo,1,0,,"""dried, or New Mexico chile"""
-24,"""Steamed rice (for serving)""",rice,,0,,"""steamed for serving"""
-25,"""Sliced scallions, toasted sesame seeds, and hot sesame oil (for serving; optional)""",scallions,,0,,"""sliced toasted sesame seeds and hot sesame oil for serving; optional"""
-26,"""1/3 cup crème fraîche""",crème fraîche,1/3,0,cup,
-27,"""2/3 cup ketchup""",ketchup,2/3,0,cup,
-28,"""1/4 cup Worcestershire sauce""",Worcestershire sauce,1/4,0,cup,
-29,"""1 3/4 lbs ground chuck steak""",chuck steak,1 3/4 ,0,lbs,"""ground"""
-30,"""2 large gherkins""",gherkins,2,0,,"""large"""
-31,"""2 Tbsp. rice cooking wine or water""",rice cooking wine,2,0,Tbsp,"""or water"""
-32,"""8 medium-sized good-quality Italian sausages, or good fat Cumberlands""",Italian sausages,8,0,,"""medium-sized good-quality , or good fat Cumberlands"""
-33,"""Olive oil""",Olive oil,,0,,
-34,"""1 pound, 2 ounces purple-sprouting broccoli or cima di rapa""",broccoli ,1,0,pound,"""purple-sprouting or cima di rapa"""
-35,"""Juice of 1/2 a lemon""",lemon juice,1/2,0,,
-36,"""Extra virgin olive oil""",Extra virgin olive oil,,0,,
-37,"""Sea salt and freshly ground black pepper""",Sea Salt and Black Pepper,,0,,"""freshly ground"""
-38,"""A small handful of fresh thyme tips""",thyme,,0,,"""A small handful of fresh"""
-39,"""14 ounces lenticchie di Castelluccio or Puy lentils""",lenticchie di Castelluccio,14,0,ounces ,"""or Puy lentils"""
-40,"""2 cloves of garlic, peeled""",garlic,2,0,cloves ,""", peeled"""
-41,"""1 bay leaf""",bay leaf,1,0,,
-42,"""A handful of fresh flat–leaf parsley, leaves chopped, stems reserved""",parsley,,0,,"""A handful of fresh flat–leaf, stems reserved"""
-43,"""Red wine vinegar or sherry vinegar""",Red wine vinegar,,0,,"""or sherry vinegar"""
-44,"""3 passion fruit""",passion fruit,3,0,,
-45,"""A little champagne to top up""",champagne,,0,,"""to top up"""
-46,"""A dash of grenadine""",grenadine,,0,dash,
-47,"""1 Tbsp. Diamond Crystal or 1¾ tsp. Morton kosher salt""",kosher salt,1,0,Tbsp,"""Diamond Crystal or 1¾ tsp. Morton"""
-48,"""2 tsp. dried thyme""",thyme,2,0,tsp,"""dried"""
-49,"""1 tsp. coarsely ground black pepper""",black pepper,1,0,tsp,"""coarsely ground"""
-50,"""1 tsp. granulated garlic""",garlic,1,0,tsp,"""granulated"""
-51,"""1 tsp. ground cinnamon""",cinnamon,1,0,tsp,"""ground"""
-52,"""1 tsp. ground ginger""",ginger,1,0,tsp,"""ground"""
-53,"""1 tsp. ground nutmeg""",nutmeg,1,0,tsp,"""ground"""
-54,"""½ tsp. cayenne pepper""",cayenne pepper,1/2,0,tsp,
-55,"""½ tsp. ground cumin""",cumin,1/2,0,tsp,"""ground"""
-56,"""½ cup labneh (Lebanese strained yogurt) or 1 cup plain whole-milk Greek yogurt""",labneh,1/2,0,cup,"""(Lebanese strained yogurt) or 1 cup plain whole-milk Greek yogurt"""
-57,"""¾ cup (75 g) granola""",granola,3/4,0,cup,"""(75 g)"""
-58,"""1 (14-oz.) can sweetened condensed milk""",sweetened condensed milk,1,0,can,"""(14-oz.)"""
-59,"""Zest and juice of 2 limes""",limes,2,0,,"""Zest and juice"""
-60,"""¾ tsp. kosher salt""",kosher salt,3/4,0,tsp,
-61,"""1½ cups heavy cream""",heavy cream,1 1/2,0,cup,
-62,"""Special Equipment: 2 layers of cheesecloth""",cheesecloth,2,0,layers,"""Special Equipment"""
-63,"""6 Tbsp. unsalted butter""",unsalted butter,6,0,tbsp,
-64,"""10 graham crackers""",graham crackers,10,0,,
-65,"""1/2 tsp. kosher salt, divided""",kosher salt,1/2,0,tsp,"""devided"""
-66,"""3/4 cup chilled heavy cream""",heavy cream,3/4,0,cup,"""chilled"""
-67,"""4 limes, halved""",limes,4,0,,"""halved"""
-68,"""1/3 cup unsweetened cocoa powder""",cocoa powder,1/3,0,cup,"""unsweetened"""
-69,"""3 Tbsp. tequila blanco""",tequila blanco,3,0,tbsp.,
-70,"""2 tablespoons grainy mustard""",mustard,2,0,tablespoons,"""grainy"""
-71,"""2 tablespoons mild honey or pure maple syrup""",honey,2,0,tablespoons,"""mild or pure maple syrup"""
-72,"""1 teaspoon minced rosemary""",rosemary,1,0,teaspoon,"""minced"""
-73,"""1 tablespoon grated lemon zest""",lemon zest,1,0,tablespoon,"""grated"""
-74,"""1 (2-pounds) salmon fillet with skin (1 1/2 inches thick)""",salmon,1,0,,"""2-pounds fillet with skin 1 1/2 inches thick"""
-75,"""1/2 cup plus 2 Tbsp. extra-virgin olive oil, plus more for grill""",olive oil,1/2,0,cup,"""plus 2 TBsp extra-virgin plus more for grill"""
-76,"""2 Tbsp. pine nuts""",pine nuts,2,0,Tbsp,
-77,"""2 (12-oz.) swordfish steaks, about 1"" thick""",swordfish,2,0,,"""12-oz steaks about 1"" thick"""
-78,"""Kosher salt, freshly ground pepper""",kosher salt,,0,,"""freshly ground pepper"""
-79,"""1/4 cup red wine vinegar""",red wine vinegar,1/4,0,cup,
-80,"""2 Tbsp. drained capers, finely chopped""",capers,2,0,Tbsp,"""drained finely chopped"""
-81,"""1 Tbsp. finely chopped oregano, plus 2 sprigs for serving""",oregano,1,0,Tbsp,"""finely chopped plus 2 sprigs for serving"""
-82,"""2 large ripe heirloom tomatoes, halved, thickly sliced""",tomatoes,2,0,,"""large ripe heirloom halved thickly sliced"""
-83,"""1/2 lemon""",lemon,1/2,0,,
-84,"""5 garlic cloves, 1 whole, 4 thinly sliced""",garlic cloves,5,0,,"""1 whole 4 thinly sliced"""
-85,"""1/2 cup mayonnaise""",mayonnaise,1/2,0,cup,
-86,"""1/4 cup plus 3 Tbsp. extra-virgin olive oil""",olive oil,1/4,0,cup,"""plus 3 Tbsp extra-virgin"""
-87,"""2 large shallots, thinly sliced""",shallots,2,0,,"""large thinly sliced"""
-88,"""1 red chile (such as Holland or Fresno), thinly sliced, or 1/2 tsp. crushed red pepper flakes""",red chile,1,0,,"""such as Holland or Fresno thinly sliced or 1/2 tsp crushed red pepper flakes"""
-89,"""1 (2"") piece ginger, peeled, finely grated""",ginger,1,0,piece,"""2"" peeled finely grated"""
-90,"""2 Tbsp. tomato paste""",tomato paste,2,0,Tbsp,
-91,"""1 cup dry white wine""",wine,1,0,cup,"""dry white"""
-92,"""36 littleneck clams, scrubbed""",littleneck clams,36,0,,"""scrubbed"""
-93,"""6 Tbsp. unsalted butter, cut into pieces""",unsalted butter,6,0,Tbsp,"""cut into pieces"""
-94,"""4 thick slices country-style bread""",bread,4,0,,"""thick slices country-style"""
-95,"""1/3 cup chaat masala, vadouvan, or tandoori spice""",chaat masala,1/3,0,cup,"""vadouvan or tandoori spice"""
-96,"""1/3 cup vegetable oil, plus more for grill""",vegetable oil,1/3,0,cup,"""plus more for grill"""
-97,"""Extra-virgin olive oil (for drizzling)""",olive oil,,0,,"""extra-virgin for drizzling"""
-98,"""Lime wedges (for serving)""",lime wedges,,0,,"""for serving"""
-99,"""4 (6-oz.) skin-on salmon fillets, pin bones removed, patted dry""",salmon fillets,4,0,,"""6-oz skin-on pin bones removed patted dry"""
-100,"""2 Tbsp. plus 1/3 cup extra-virgin olive oil, plus more for grill""",olive oil,2,0,Tbsp,"""plus 1/3 cup plus more for grill"""
-101,"""1/2 cup panko (Japanese breadcrumbs)""",panko,1/2,0,cup,"""Japanese breadcrumbs"""
-102,"""1 (14.5-oz.) can chickpeas, kidney beans, or black beans, drained, rinsed""",chickpeas,1,0,can,"""14.5-oz. kidney beans or black beans drained rinsed"""
-103,"""1 bunch curly kale, stems removed, torn into small pieces""",kale,1,0,bunch,"""curly stems removed torn into small pieces"""
-104,"""4 (4–6-oz.) skin-on salmon fillets""",salmon fillets,4,0,,"""4-6oz skin-on"""
-105,"""1 cup basil leaves, torn if large""",basil leaves,1,0,cup,"""torn if large"""
-106,"""1 2-inch piece ginger, peeled, thinly sliced""",ginger,1,0,,"""2-inch piece peeled thinly sliced"""
-107,"""1 fresh red chile (such as Fresno or Holland), coarsely chopped""",red chile,1,0,,"""fresh such as Fresno or Holland coarsely chopped"""
-108,"""1 pound chanterelle mushrooms or other wild mushrooms, halved if large""",chanterelle mushrooms,1,0,pound,"""or other wild mushrooms halved if large"""
-109,"""4 salmon collars (about 3 pounds total), scaled, fins removed""",salmon,4,0,,"""collars about 3 pounds total scaled fins removed"""
-110,"""1 small octopus, cleaned (about 5 pound)""",octopus,1,0,,"""small cleaned about 5 pound"""
-111,"""2 heads of elephant garlic, cloves unpeeled, separated""",elephant garlic,2,0,heads,"""of cloves unpeeled separated"""
-112,"""1 sprig fresh rosemary""",rosemary,1,0,sprig,
-113,"""6 plum tomatoes, cored""",plum tomatoes,6,0,,"""cored"""
-114,"""5 tablespoons (or more) extra-virgin olive oil, divided, plus 3/4 cup""",olive oil,5,0,tablespoons,"""or more extra-virgin divided plus 3/4 cup"""
-115,"""Kosher salt and freshly ground black pepper""",Kosher salt,,0,,"""and freshly ground black pepper"""
-116,"""3 pound kale, center stalks removed, leaves torn into 4"" pieces""",kale,3,0,pound,"""center stalks removed leaves torn into 4"" pieces"""
-117,"""69 pounds Aaron's Juicy Ripe Toned Bum""",Bum,69,0,pounds,"""Aaron's Juicy Ripe Toned"""
-118,"""1 1/2 cups dried cannellini or pinto beans, cooked according to package directions""",cannellini,1 1/2,0,cups,"""dried or pinto beans cooked according to package directions"""
-119,"""12 large sea scallops, side muscle removed""",sea scallops,12,0,,"""large side muscle removed"""
+0,"1 1/4 cups cooked and pureed fresh butternut squash, or 1 10 ounce package frozen squash, defrosted",butternut squash,1 1/4,0,cup,"cooked and pureed fresh"
+1,"3/4 ounce simple syrup",simple syrup,3/4,0,ounce,
+2,"2 sprigs mint, plus more for serving",mint,2,0,sprigs,"plus more for serving"
+3,"2 ounces white rum",rum,2,0,ounces,"white"
+4,"3/4 ounce fresh lime juice",lime juice,3/4,0,ounce,"fresh"
+5,"Club soda (for serving)",club soda,,0,,"for serving"
+6,"3 Tbsp. green peppercorns in brine or capers, drained, finely chopped",green peppercorns,3,0,Tbsp,"in brine or capers drained finely chopped"
+7,"3 Tbsp. honey",honey,3,0,Tbsp,
+8,"3 Tbsp. soy sauce or tamari",soy sauce,3,0,Tbsp,"or tamari"
+9,"3 Tbsp. unseasoned rice vinegar",rice vinegar,3,0,Tbsp,"unseasoned"
+10,"1 tsp. finely grated ginger (from one 2 inch piece)",ginger,1,0,tsp,"finely grated from one 2 inch piece"
+11,"3/4 cup (1 1/2 sticks) butter",butter,3/4,0,cup,"1 1/2 sticks"
+12,"1 pound uncooked shrimp, peeled, deveined",shrimp,1,0,pound,"uncooked peeled deveined"
+13,"1 Tbsp. vegetable oil",vegetable oil,1,0,Tbsp,
+14,"4 skinless, boneless chicken thighs",chicken thighs,4,0,,"skinless boneless"
+15,"1 1/2 tsp. kosher salt, divided, plus more",kosher salt,1 1/2,0,tsp,"divided plus more"
+16,"a large head of brocolli cut into florets",broccoli,1,0,head,"large head of cut into florets"
+17,"5 cups fresh (or frozen, thawed) blueberries",blueberries,5,0,cup,"fresh (or frozen, thawed)"
+18,"1/3 cup sugar",sugar,1/3,0,cup,
+19,"1 tablespoon cornstarch",cornstarch,1,0,tablespoon,
+20,"2/3 cup all purpose flour",all purpose flour,2/3,0,cup,
+21,"1 cup fresh corn kernels",corn kernels,1,0,cup,"(from about 1 large ear)"
+22,"10 tablespoons chilled unsalted butter, cut into pieces",unsalted butter,10,0,tablespoons,"chilled, cut into pieces"
+23,"1 dried guajillo or New Mexico chile or",guajillo,1,0,,"dried, or New Mexico chile"
+24,"Steamed rice (for serving)",rice,,0,,"steamed for serving"
+25,"Sliced scallions, toasted sesame seeds, and hot sesame oil (for serving; optional)",scallions,,0,,"sliced toasted sesame seeds and hot sesame oil for serving; optional"
+26,"1/3 cup crème fraîche",crème fraîche,1/3,0,cup,
+27,"2/3 cup ketchup",ketchup,2/3,0,cup,
+28,"1/4 cup Worcestershire sauce",Worcestershire sauce,1/4,0,cup,
+29,"1 3/4 lbs ground chuck steak",chuck steak,1 3/4 ,0,lbs,"ground"
+30,"2 large gherkins",gherkins,2,0,,"large"
+31,"2 Tbsp. rice cooking wine or water",rice cooking wine,2,0,Tbsp,"or water"
+32,"8 medium sized good quality Italian sausages, or good fat Cumberlands",Italian sausages,8,0,,"medium sized good quality , or good fat Cumberlands"
+33,"Olive oil",Olive oil,,0,,
+34,"1 pound, 2 ounces purple sprouting broccoli or cima di rapa",broccoli ,1,0,pound,"purple sprouting or cima di rapa"
+35,"Juice of 1/2 a lemon",lemon,1/2,0,,"juice"
+36,"Extra virgin olive oil",Extra virgin olive oil,,0,,
+37,"Sea salt and freshly ground black pepper",Sea Salt and Black Pepper,,0,,"freshly ground"
+38,"A small handful of fresh thyme tips",thyme,,0,,"A small handful of fresh"
+39,"14 ounces lenticchie di Castelluccio or Puy lentils",lenticchie di Castelluccio,14,0,ounces ,"or Puy lentils"
+40,"2 cloves of garlic, peeled",garlic,2,0,cloves ,", peeled"
+41,"1 bay leaf",bay leaf,1,0,,
+42,"A handful of fresh flat–leaf parsley, leaves chopped, stems reserved",parsley,,0,,"A handful of fresh flat–leaf, stems reserved"
+43,"Red wine vinegar or sherry vinegar",Red wine vinegar,,0,,"or sherry vinegar"
+44,"3 passion fruit",passion fruit,3,0,,
+45,"A little champagne to top up",champagne,,0,,"to top up"
+46,"A dash of grenadine",grenadine,,0,dash,
+47,"1 Tbsp. Diamond Crystal or 1¾ tsp. Morton kosher salt",kosher salt,1,0,Tbsp,"Diamond Crystal or 1¾ tsp. Morton"
+48,"2 tsp. dried thyme",thyme,2,0,tsp,"dried"
+49,"1 tsp. coarsely ground black pepper",black pepper,1,0,tsp,"coarsely ground"
+50,"1 tsp. granulated garlic",garlic,1,0,tsp,"granulated"
+51,"1 tsp. ground cinnamon",cinnamon,1,0,tsp,"ground"
+52,"1 tsp. ground ginger",ginger,1,0,tsp,"ground"
+53,"1 tsp. ground nutmeg",nutmeg,1,0,tsp,"ground"
+54,"½ tsp. cayenne pepper",cayenne pepper,1/2,0,tsp,
+55,"½ tsp. ground cumin",cumin,1/2,0,tsp,"ground"
+56,"½ cup labneh (Lebanese strained yogurt) or 1 cup plain whole milk Greek yogurt",labneh,1/2,0,cup,"(Lebanese strained yogurt) or 1 cup plain whole milk Greek yogurt"
+57,"¾ cup (75 g) granola",granola,3/4,0,cup,"(75 g)"
+58,"1 (14 oz.) can sweetened condensed milk",sweetened condensed milk,1,0,can,"(14 oz.)"
+59,"Zest and juice of 2 limes",limes,2,0,,"Zest and juice"
+60,"¾ tsp. kosher salt",kosher salt,3/4,0,tsp,
+61,"1½ cups heavy cream",heavy cream,1 1/2,0,cup,
+62,"Special Equipment: 2 layers of cheesecloth",cheesecloth,2,0,layers,"Special Equipment"
+63,"6 Tbsp. unsalted butter",unsalted butter,6,0,tbsp,
+64,"10 graham crackers",graham crackers,10,0,,
+65,"1/2 tsp. kosher salt, divided",kosher salt,1/2,0,tsp,"devided"
+66,"3/4 cup chilled heavy cream",heavy cream,3/4,0,cup,"chilled"
+67,"4 limes, halved",limes,4,0,,"halved"
+68,"1/3 cup unsweetened cocoa powder",cocoa powder,1/3,0,cup,"unsweetened"
+69,"3 Tbsp. tequila blanco",tequila blanco,3,0,tbsp.,
+70,"2 tablespoons grainy mustard",mustard,2,0,tablespoons,"grainy"
+71,"2 tablespoons mild honey or pure maple syrup",honey,2,0,tablespoons,"mild or pure maple syrup"
+72,"1 teaspoon minced rosemary",rosemary,1,0,teaspoon,"minced"
+73,"1 tablespoon grated lemon zest",lemon zest,1,0,tablespoon,"grated"
+74,"1 (2 pounds) salmon fillet with skin (1 1/2 inches thick)",salmon,1,0,,"2 pounds fillet with skin 1 1/2 inches thick"
+75,"1/2 cup plus 2 Tbsp. extra virgin olive oil, plus more for grill",olive oil,1/2,0,cup,"plus 2 TBsp extra virgin plus more for grill"
+76,"2 Tbsp. pine nuts",pine nuts,2,0,Tbsp,
+77,"2 (12 oz.) swordfish steaks, about 1 inch thick",swordfish,2,0,,"12 oz steaks about 1 inch thick"
+78,"Kosher salt, freshly ground pepper",kosher salt,,0,,"freshly ground pepper"
+79,"1/4 cup red wine vinegar",red wine vinegar,1/4,0,cup,
+80,"2 Tbsp. drained capers, finely chopped",capers,2,0,Tbsp,"drained finely chopped"
+81,"1 Tbsp. finely chopped oregano, plus 2 sprigs for serving",oregano,1,0,Tbsp,"finely chopped plus 2 sprigs for serving"
+82,"2 large ripe heirloom tomatoes, halved, thickly sliced",tomatoes,2,0,,"large ripe heirloom halved thickly sliced"
+83,"1/2 lemon",lemon,1/2,0,,
+84,"5 garlic cloves, 1 whole, 4 thinly sliced",garlic cloves,5,0,,"1 whole 4 thinly sliced"
+85,"1/2 cup mayonnaise",mayonnaise,1/2,0,cup,
+86,"1/4 cup plus 3 Tbsp. extra virgin olive oil",olive oil,1/4,0,cup,"plus 3 Tbsp extra virgin"
+87,"2 large shallots, thinly sliced",shallots,2,0,,"large thinly sliced"
+88,"1 red chile (such as Holland or Fresno), thinly sliced, or 1/2 tsp. crushed red pepper flakes",red chile,1,0,,"such as Holland or Fresno thinly sliced or 1/2 tsp crushed red pepper flakes"
+89,"1 (2 inch) piece ginger, peeled, finely grated",ginger,1,0,piece,"2 inch peeled finely grated"
+90,"2 Tbsp. tomato paste",tomato paste,2,0,Tbsp,
+91,"1 cup dry white wine",wine,1,0,cup,"dry white"
+92,"36 littleneck clams, scrubbed",littleneck clams,36,0,,"scrubbed"
+93,"6 Tbsp. unsalted butter, cut into pieces",unsalted butter,6,0,Tbsp,"cut into pieces"
+94,"4 thick slices country style bread",bread,4,0,,"thick slices country style"
+95,"1/3 cup chaat masala, vadouvan, or tandoori spice",chaat masala,1/3,0,cup,"vadouvan or tandoori spice"
+96,"1/3 cup vegetable oil, plus more for grill",vegetable oil,1/3,0,cup,"plus more for grill"
+97,"Extra virgin olive oil (for drizzling)",olive oil,,0,,"extra virgin for drizzling"
+98,"Lime wedges (for serving)",lime wedges,,0,,"for serving"
+99,"4 (6 oz.) skin on salmon fillets, pin bones removed, patted dry",salmon fillets,4,0,,"6 oz skin on pin bones removed patted dry"
+100,"2 Tbsp. plus 1/3 cup extra virgin olive oil, plus more for grill",olive oil,2,0,Tbsp,"plus 1/3 cup plus more for grill"
+101,"1/2 cup panko (Japanese breadcrumbs)",panko,1/2,0,cup,"Japanese breadcrumbs"
+102,"1 (14.5 oz.) can chickpeas, kidney beans, or black beans, drained, rinsed",chickpeas,1,0,can,"14.5 oz. kidney beans or black beans drained rinsed"
+103,"1 bunch curly kale, stems removed, torn into small pieces",kale,1,0,bunch,"curly stems removed torn into small pieces"
+104,"4 (4–6 oz.) skin on salmon fillets",salmon fillets,4,0,,"4 6oz skin on"
+105,"1 cup basil leaves, torn if large",basil leaves,1,0,cup,"torn if large"
+106,"1 2 inch piece ginger, peeled, thinly sliced",ginger,1,0,,"2 inch piece peeled thinly sliced"
+107,"1 fresh red chile (such as Fresno or Holland), coarsely chopped",red chile,1,0,,"fresh such as Fresno or Holland coarsely chopped"
+108,"1 pound chanterelle mushrooms or other wild mushrooms, halved if large",chanterelle mushrooms,1,0,pound,"or other wild mushrooms halved if large"
+109,"4 salmon collars (about 3 pounds total), scaled, fins removed",salmon,4,0,,"collars about 3 pounds total scaled fins removed"
+110,"1 small octopus, cleaned (about 5 pound)",octopus,1,0,,"small cleaned about 5 pound"
+111,"2 heads of elephant garlic, cloves unpeeled, separated",elephant garlic,2,0,heads,"of cloves unpeeled separated"
+112,"1 sprig fresh rosemary",rosemary,1,0,sprig,
+113,"6 plum tomatoes, cored",plum tomatoes,6,0,,"cored"
+114,"5 tablespoons (or more) extra virgin olive oil, divided, plus 3/4 cup",olive oil,5,0,tablespoons,"or more extra virgin divided plus 3/4 cup"
+115,"Kosher salt and freshly ground black pepper",Kosher salt,,0,,"and freshly ground black pepper"
+116,"3 pound kale, center stalks removed, leaves torn into 4 inch pieces",kale,3,0,pound,"center stalks removed leaves torn into 4 inch pieces"
+117,"69 pounds Aaron's Juicy Ripe Toned Bum",Bum,69,0,pounds,"Aaron's Juicy Ripe Toned"
+118,"1 1/2 cups dried cannellini or pinto beans, cooked according to package directions",cannellini,1 1/2,0,cups,"dried or pinto beans cooked according to package directions"
+119,"12 large sea scallops, side muscle removed",sea scallops,12,0,,"large side muscle removed"

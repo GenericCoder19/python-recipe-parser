@@ -5,7 +5,9 @@ from msrest.authentication import CognitiveServicesCredentials
 
 import datetime, json, os, time
 import csv
+from tqdm import tqdm
 import re
+import time
 
 authoring_key = 'c04d90e868b64a428447ce34dd941306'
 authoring_endpoint = 'https://ingredient-parser-authoring.cognitiveservices.azure.com/'
@@ -26,9 +28,37 @@ class UtterenceObject:
             self.unit = None
         self.ingredient = re.sub(',|(|)', '', ingredient)
         if comment:
-            self.comment = re.sub(',|(|)', '', comment) # TODO - make this a list of comments
+            self.comment = []
+            for c in comment:
+                self.comment.append(re.sub(',|(|)', '', c))
         else:
             self.comment = None
+
+def get_list_of_contiguous_comments(comment, sentence):
+    ''' This function is meant to extract the contiguous comments found within the  '''
+    c_arr, s_arr = comment.split(" "), sentence.split(" ")
+    contiguous_comments = []
+    current_contiguous_comment = []
+    while(len(s_arr)):
+        if s_arr[0] != c_arr[0]:
+            s_arr.pop(0)
+        else:
+            break
+    while(len(c_arr) and len(s_arr)):
+        temp_c = c_arr.pop(0)
+        if temp_c == s_arr.pop(0):
+            current_contiguous_comment.append(temp_c)
+        else:
+            contiguous_comments.append(" ".join(current_contiguous_comment))
+            current_contiguous_comment = []
+            while(len(s_arr)):
+                if temp_c == s_arr.pop(0):
+                    current_contiguous_comment.append(temp_c)
+                    break
+    if len(current_contiguous_comment):
+        contiguous_comments.append(" ".join(current_contiguous_comment))
+    return contiguous_comments
+            
 
 def get_first_continuous_comment(comment, sentence):
     # TODO - we need to change the behavior to return a list of strings that are all of the contiguous comment strings
@@ -55,10 +85,10 @@ def create_utterance_object_list():
         # with open('ManualIngredientDataSet.csv') as csvfile:
         readCSV = csv.reader(csvfile, delimiter=',')
         for row in readCSV:
-            sentence = row[1].lower()
+            sentence = re.sub(',|(|)', '', row[1].lower())
             unit = row[5].lower()
             ingredient = row[2].lower()
-            comment = row[6].lower()
+            comment = [row[6].lower()]
 
             def stupid_quantity(sentence):
                 quantity = ""
@@ -74,11 +104,14 @@ def create_utterance_object_list():
             quantity = row[3] if row[3].find(".") == -1 else stupid_quantity(sentence)
 
             if (unit and unit not in sentence) or (ingredient not in sentence) or (quantity and quantity not in sentence): # if it's missing anything, pass
-                print("{}; {}; {}; {}; {}".format(sentence, unit, ingredient, comment, quantity))
+                # print("Printing cause we're missing this: {}; {}; {}; {}; {}".format(sentence, unit, ingredient, comment, quantity))
                 continue
-            if (comment not in sentence and comment):
+            if (comment[0] not in sentence and comment):
                 # TODO - when this is redone, make sure comment is treated as a list
-                comment = get_first_continuous_comment(comment, sentence)
+                comment = get_list_of_contiguous_comments(comment[0], sentence)
+
+            # print("adding the following object: {}; {}; {}; {}; {}".format(sentence, quantity, unit, ingredient, comment))
+            # time.sleep(1)
 
             utterances.append(UtterenceObject( # adds an utterance to the list given above
                 sentence, 
@@ -118,7 +151,7 @@ def add_entities(app_id, app_version):
     ingredientEntityId = client.model.add_entity(app_id, app_version, name="ingredient")
     commentEntityId = client.model.add_entity(app_id, app_version, name="comment")
 
-def create_utterance(intent, utterance, *labels):
+def create_utterance(intent, utterance, labels):
     # when things becomes a list, update this.
     text = utterance.lower()
 
@@ -135,13 +168,21 @@ def add_utterances(app_id, app_version, utterances):
         if(utterance.sentence == ""):
             continue
         # when things becomes a list, update this.
-        azure_utterances.append(create_utterance("FindIngredient", utterance.sentence,
-                ("quantity", utterance.quantity),
-                ("unit", utterance.unit),
-                ("ingredient", utterance.ingredient),
-                ("comment", utterance.comment)
-                ))
-    for i in range(len(azure_utterances) // 10 - 1):
+        labels = []
+        if(utterance.quantity):
+            labels.append(("quantity", utterance.quantity))
+        if(utterance.unit):
+            labels.append(("unit", utterance.unit))
+        if(utterance.ingredient):
+            labels.append(("ingredient", utterance.ingredient))
+        if(utterance.comment):
+            for comment in utterance.comment:
+                labels.append(("comment", comment))
+
+        azure_utterances.append(
+            create_utterance("FindIngredient", utterance.sentence, labels))
+
+    for i in tqdm(range(len(azure_utterances) // 10 - 1)):
         client.examples.batch(app_id, app_version, azure_utterances[i * 10:(i+1) * 10])
     print("{} example utterance(s) added.".format(len(azure_utterances)))
 
